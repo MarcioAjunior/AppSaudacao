@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
       marginLeft: '7.0rem'
     },
     txt : {
-      fontSize : 60
+      fontSize : 59
     } 
   }));
   export default useStyles;
