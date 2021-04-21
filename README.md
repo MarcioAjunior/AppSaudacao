@@ -1,3 +1,3 @@
 # AppSaudacao
 
-# Uma simples aplicação que retorna uma mensgem de acordo com o periodo do dia
+Uma simples aplicação que retorna uma mensagem de acordo com o periodo do dia
