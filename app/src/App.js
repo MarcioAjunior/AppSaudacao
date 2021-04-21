@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import useStyles from './styles'
 
 import TextTransition, { presets } from "react-text-transition";
-import Lottie from 'react-lottie';
 
 export default function SaudacaoApp() {
   const classes = useStyles();
   const [msg, setMsg] = useState('')
   const [data, setData] = useState(new Date())
   const [color, setColor] = useState()
+  
 
   useEffect(()=>
     http.get('/saudacao').then(response => {
@@ -45,14 +45,16 @@ export default function SaudacaoApp() {
       <CssBaseline />
       <Container component="main" className={classes.box} maxWidth="sm">
           <TextTransition 
-          className={classes.txt}
-          text={msg}
-          springConfig = { presets.slow }
+            className={classes.txt}
+            text={msg}
+            springConfig = { presets.wobbly }
            />
         <Container>
         <Typography variant="h5" component="h2" className={classes.typ}>
             {data.getHours()}:{data.getMinutes()}:{data.getSeconds()}
         </Typography>
+        </Container>
+        <Container>
         </Container>
       </Container>
     </div>
